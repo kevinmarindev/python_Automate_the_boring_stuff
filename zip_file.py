@@ -17,6 +17,11 @@ def backup_to_zip():
             zipfile.ZipFile(f"spam_{n}.zip", "w")
             break
         n += 1
+    print("the p", pathlib.Path().cwd())
+    for directory, subdirectories, files in os.walk(pathlib.Path().cwd()):
+        print("here", directory, subdirectories, files)
+
+        break
         
     #Then, it will create the file, walk the folder folder
     #add each of the subfolders and files to the ZIP file.
