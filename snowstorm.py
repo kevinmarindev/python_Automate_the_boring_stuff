@@ -1,10 +1,13 @@
-import os, random, time, sys, pymsgbox
+import os, random, time, sys
 
 TOP    = chr(9600)  # Character 9600 is '▀'
 BOTTOM = chr(9604)  # Character 9604 is '▄'
 FULL   = chr(9608)  # Character 9608 is '█'
-pymsgbox.alert('Press OK to start the snowstorm animation.\n\n(Press Ctrl-C to stop.)', 'Snowstorm')
-# Set the snowstorm density to the command line argument:
+
+#pymsgbox.alert('Press OK to start the snowstorm animation.\n\n(Press Ctrl-C to stop.)', 'Snowstorm')
+# Comment: pymsgbox did not work because the required Tkinter library is missing from your Python installation.
+# Tkinter is needed for GUI dialogs, and without it, pymsgbox cannot display message boxes.# Set the snowstorm density to the command line argument:
+
 DENSITY = 4  # Default snow density is 4%
 if len(sys.argv) > 1:
     DENSITY = int(sys.argv[1])
