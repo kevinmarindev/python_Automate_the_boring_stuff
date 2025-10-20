@@ -1,5 +1,5 @@
-import os, random, time, sys
-
+import os, random, time, sys, pyperclip
+print(pyperclip.paste())
 TOP    = chr(9600)  # Character 9600 is '▀'
 BOTTOM = chr(9604)  # Character 9604 is '▄'
 FULL   = chr(9608)  # Character 9608 is '█'
